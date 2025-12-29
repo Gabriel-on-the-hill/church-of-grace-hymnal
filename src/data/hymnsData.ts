@@ -1661,6 +1661,11 @@ Refrain:
 3. We are going to a palace that is built of gold and glass;
    Glory to God, hallelujah!
    Where the King in all His splendor shall before us pass;
+   Glory to God, hallelujah!
+
+4. There we'll shout redeeming mercy in a glad new song,
+   Glory to God, hallelujah!
+   There we'll sing the praises of Jesus with the blood-washed throng,
    Glory to God, hallelujah!` },
    {
       id: 71, title: "Forth in Thy Name, O Lord, I Go", author: "Charles Wesley", year: "1749", category: "Victory and Service", categoryId: 7, lyrics: `1. Forth in Thy Name, O Lord, I go,
