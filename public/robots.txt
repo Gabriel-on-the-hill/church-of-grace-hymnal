@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://church-of-grace-hymnal.vercel.app
+
+# Sitemaps
+Sitemap: https://church-of-grace-hymnal.vercel.app/sitemap.xml
