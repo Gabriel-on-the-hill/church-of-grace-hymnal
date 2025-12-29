@@ -15,12 +15,12 @@ export default function DoveIcon({ className = "w-24 h-24", withText = false }: 
                 <>
                     <path
                         id="textCurve"
-                        d="M 30,100 A 70,70 0 0 1 170,100"
+                        d="M 22,100 A 78,78 0 0 1 178,100"
                         fill="none"
                     />
-                    <text fill="#c9a227" fontSize="18" fontWeight="bold" fontFamily="serif" letterSpacing="2">
+                    <text fill="#c9a227" fontSize="22" fontWeight="bold" fontFamily="serif" letterSpacing="1">
                         <textPath href="#textCurve" startOffset="50%" textAnchor="middle">
-                            CHURCH OF GRACE HYMNS
+                            Church of Grace Hymns
                         </textPath>
                     </text>
                 </>
