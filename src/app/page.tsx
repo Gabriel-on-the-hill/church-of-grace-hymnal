@@ -31,9 +31,10 @@ export default function Home() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "var(--accent)" }}>
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L9 9H2L7 14L5 21L12 17L19 21L17 14L22 9H15L12 2Z" />
+                <path d="M12.5 2C9.64 2 7.21 3.79 6.3 6.3L2 8.5l4.3 2.2c.91 2.51 3.34 4.3 6.2 4.3.67 0 1.32-.1 1.94-.27L19 17l-2.17-2.17c.11-.27.17-.55.17-.83 0-1.1-.9-2-2-2-.28 0-.56.06-.83.17L12 10l2.27-4.56c-.62-.17-1.27-.27-1.94-.27-.33 0-.66.03-.98.07L10 3.5V2.05c.79-.03 1.59.02 2.37.15L14.5 2h-2zm-1 4c.28 0 .5.22.5.5s-.22.5-.5.5-.5-.22-.5-.5.22-.5.5-.5zM8 20c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-3l-4 2-4-2v3z" />
               </svg>
             </div>
+
             <h1 className="text-2xl font-bold text-white">Church of Grace SELECTED HYMNS OF WORSHIP</h1>
           </div>
 
