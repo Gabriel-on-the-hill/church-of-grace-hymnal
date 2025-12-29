@@ -2,12 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { categories, allHymns, searchHymns } from "@/data";
+import { categories, allHymns, searchHymns, getFirstLine } from "@/data";
+import { DoveIcon } from "@/components/DoveIcon";
+import { useTheme } from "@/context/ThemeContext";
+
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<typeof allHymns>([]);
   const [isSearching, setIsSearching] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -28,15 +32,33 @@ export default function Home() {
         style={{ background: "linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)" }}
       >
         <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "var(--accent)" }}>
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.5 2C9.64 2 7.21 3.79 6.3 6.3L2 8.5l4.3 2.2c.91 2.51 3.34 4.3 6.2 4.3.67 0 1.32-.1 1.94-.27L19 17l-2.17-2.17c.11-.27.17-.55.17-.83 0-1.1-.9-2-2-2-.28 0-.56.06-.83.17L12 10l2.27-4.56c-.62-.17-1.27-.27-1.94-.27-.33 0-.66.03-.98.07L10 3.5V2.05c.79-.03 1.59.02 2.37.15L14.5 2h-2zm-1 4c.28 0 .5.22.5.5s-.22.5-.5.5-.5-.22-.5-.5.22-.5.5-.5zM8 20c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-3l-4 2-4-2v3z" />
-              </svg>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "var(--accent)" }}>
+                <DoveIcon className="w-6 h-6 text-white" />
+              </div>
+              <h1 className="text-xl font-bold text-white">Church of Grace SELECTED HYMNS OF WORSHIP</h1>
             </div>
 
-            <h1 className="text-2xl font-bold text-white">Church of Grace SELECTED HYMNS OF WORSHIP</h1>
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full flex items-center justify-center"
+              style={{ background: "rgba(255,255,255,0.1)" }}
+              title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+            >
+              {theme === "light" ? (
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              )}
+            </button>
           </div>
+
 
           {/* Search Bar */}
           <div className="relative">
@@ -90,6 +112,9 @@ export default function Home() {
                         </h3>
                         <p className="text-sm" style={{ color: "var(--text-muted)" }}>
                           {hymn.author}
+                        </p>
+                        <p className="text-sm italic truncate mt-1" style={{ color: "var(--text-secondary)" }}>
+                          &ldquo;{getFirstLine(hymn.lyrics)}&rdquo;
                         </p>
                         <span className="category-badge mt-2 inline-block">
                           {hymn.category}

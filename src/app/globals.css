@@ -73,8 +73,15 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
@@ -136,4 +143,66 @@ body {
 .heart-icon.active {
   color: #ef4444;
   fill: #ef4444;
+}
+
+/* Print Stylesheet */
+@media print {
+
+  /* Hide navigation and UI elements */
+  header,
+  .btn-primary,
+  .card-hover:hover,
+  button,
+  nav,
+  footer,
+  .heart-icon,
+  [title="Go to home"] {
+    display: none !important;
+  }
+
+  /* Reset backgrounds for printing */
+  body,
+  .min-h-screen,
+  main,
+  div {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Optimize hymn display */
+  .hymn-lyrics {
+    font-size: 14pt !important;
+    line-height: 1.6 !important;
+    color: black !important;
+  }
+
+  /* Ensure page breaks don't split stanzas */
+  .hymn-lyrics>div {
+    page-break-inside: avoid;
+  }
+
+  /* Show hymn title clearly */
+  h1 {
+    font-size: 18pt !important;
+    color: black !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Category badge for print */
+  .category-badge {
+    background: none !important;
+    color: #666 !important;
+    border: 1px solid #666 !important;
+  }
+
+  /* Remove shadows and borders */
+  * {
+    box-shadow: none !important;
+  }
+
+  /* Page setup */
+  @page {
+    margin: 1in;
+    size: letter;
+  }
 }

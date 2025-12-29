@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Church of Grace SELECTED HYMNS OF WORSHIP",
@@ -17,9 +18,10 @@ export const viewport: Viewport = {
   themeColor: "#1e3a5f",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
 };
+
 
 export default function RootLayout({
   children,
@@ -32,10 +34,13 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
       <body className="antialiased">
-        <ServiceWorkerRegistration />
-        {children}
+        <ThemeProvider>
+          <ServiceWorkerRegistration />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
 
