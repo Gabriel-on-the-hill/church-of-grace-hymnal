@@ -4,10 +4,10 @@ export default function DoveIcon({ className = "w-24 h-24", withText = false }: 
             {/* Project Icon */}
             <image
                 href="/icon-512.png"
-                x="25"
-                y="25"
-                width="150"
-                height="150"
+                x="0"
+                y="0"
+                width="200"
+                height="200"
             />
 
             {/* Arched Text */}
