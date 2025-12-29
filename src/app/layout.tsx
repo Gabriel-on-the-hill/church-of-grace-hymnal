@@ -3,7 +3,7 @@ import "./globals.css";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
 export const metadata: Metadata = {
-  title: "Church of Grace Hymnal",
+  title: "Church of Grace SELECTED HYMNS OF WORSHIP",
   description: "A collection of 75 classic hymns for worship and devotion",
   manifest: "/manifest.json",
   appleWebApp: {

@@ -1,40 +1,40 @@
 // Hymn type definition
 export interface Hymn {
-  id: number;
-  title: string;
-  author: string;
-  year?: string;
-  category: string;
-  categoryId: number;
-  lyrics: string;
+   id: number;
+   title: string;
+   author: string;
+   year?: string;
+   category: string;
+   categoryId: number;
+   lyrics: string;
 }
 
 export interface Category {
-  id: number;
-  name: string;
-  hymnCount: number;
+   id: number;
+   name: string;
+   hymnCount: number;
 }
 
 export const categories: Category[] = [
-  { id: 1, name: "Adoration and Praise", hymnCount: 12 },
-  { id: 2, name: "Jesus Christ", hymnCount: 17 },
-  { id: 3, name: "Grace and Salvation of God", hymnCount: 10 },
-  { id: 4, name: "Trust and Assurance", hymnCount: 11 },
-  { id: 5, name: "Guidance and Prayer", hymnCount: 7 },
-  { id: 6, name: "Discipleship and Consecration", hymnCount: 7 },
-  { id: 7, name: "Victory and Service", hymnCount: 7 },
-  { id: 8, name: "Hope and Eternal Life", hymnCount: 4 },
+   { id: 1, name: "Adoration and Praise", hymnCount: 12 },
+   { id: 2, name: "Jesus Christ", hymnCount: 17 },
+   { id: 3, name: "Grace and Salvation of God", hymnCount: 10 },
+   { id: 4, name: "Trust and Assurance", hymnCount: 11 },
+   { id: 5, name: "Guidance and Prayer", hymnCount: 7 },
+   { id: 6, name: "Discipleship and Consecration", hymnCount: 7 },
+   { id: 7, name: "Victory and Service", hymnCount: 7 },
+   { id: 8, name: "Hope and Eternal Life", hymnCount: 4 },
 ];
 
 export const hymns: Hymn[] = [
-  {
-    id: 1,
-    title: "Praise, My Soul, the King of Heaven",
-    author: "Henry Francis Lyte",
-    year: "1834",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. Praise, my soul, the King of heaven;
+   {
+      id: 1,
+      title: "Praise, My Soul, the King of Heaven",
+      author: "Henry Francis Lyte",
+      year: "1834",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. Praise, my soul, the King of heaven;
    To His feet thy tribute bring.
    Ransomed, healed, restored, forgiven,
    Evermore His praises sing:
@@ -60,16 +60,23 @@ export const hymns: Hymn[] = [
    Sun and moon, bow down before Him,
    Dwellers all in time and space.
    Alleluia! Alleluia!
-   Praise with us the God of grace.`
-  },
-  {
-    id: 2,
-    title: "O Worship the King",
-    author: "Robert Grant",
-    year: "1833",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. O worship the King, all glorious above,
+   Praise with us the God of grace.
+
+5. Praise Him, soul, for all His blessings;
+   Praise Him, for He is our Friend;
+   He whose love is never failing,
+   Endless, though our days should end.
+   Alleluia! Alleluia!
+   Praise the everlasting King.`
+   },
+   {
+      id: 2,
+      title: "O Worship the King",
+      author: "Robert Grant",
+      year: "1833",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. O worship the King, all glorious above,
    O gratefully sing God's power and God's love;
    Our Shield and Defender, the Ancient of Days,
    Pavilioned in splendor, and girded with praise.
@@ -98,15 +105,15 @@ export const hymns: Hymn[] = [
    Whom angels delight to hymn Thee above,
    Thy ransomed creation, with glory ablaze,
    In true adoration shall sing to Thy praise!`
-  },
-  {
-    id: 3,
-    title: "O Praise Ye the Lord",
-    author: "Henry Williams Baker",
-    year: "1875",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. O praise ye the Lord! Praise Him in the height;
+   },
+   {
+      id: 3,
+      title: "O Praise Ye the Lord",
+      author: "Henry Williams Baker",
+      year: "1875",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. O praise ye the Lord! Praise Him in the height;
    Rejoice in His Word, ye angels of light;
    Ye heavens, adore Him by Whom ye were made,
    And worship before Him in brightness arrayed.
@@ -125,15 +132,15 @@ export const hymns: Hymn[] = [
    To Him be outpoured all ages along!
    For love in creation, for Heaven restored,
    For grace of salvation, O praise ye the Lord!`
-  },
-  {
-    id: 4,
-    title: "Holy, Holy, Holy! Lord God Almighty",
-    author: "Reginald Heber",
-    year: "1826",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. Holy, holy, holy! Lord God Almighty!
+   },
+   {
+      id: 4,
+      title: "Holy, Holy, Holy! Lord God Almighty",
+      author: "Reginald Heber",
+      year: "1826",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. Holy, holy, holy! Lord God Almighty!
    Early in the morning our song shall rise to Thee;
    Holy, holy, holy! Merciful and mighty!
    God in three persons, blessed Trinity!
@@ -152,15 +159,15 @@ export const hymns: Hymn[] = [
    All Thy works shall praise Thy name in earth, and sky, and sea;
    Holy, holy, holy! Merciful and mighty!
    God in three persons, blessed Trinity!`
-  },
-  {
-    id: 5,
-    title: "To God Be the Glory",
-    author: "Fanny J. Crosby",
-    year: "1875",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. To God be the glory, great things He hath done,
+   },
+   {
+      id: 5,
+      title: "To God Be the Glory",
+      author: "Fanny J. Crosby",
+      year: "1875",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. To God be the glory, great things He hath done,
    So loved He the world that He gave us His Son,
    Who yielded His life an atonement for sin,
    And opened the life-gate that all may go in.
@@ -180,15 +187,15 @@ Refrain:
    And great our rejoicing through Jesus the Son;
    But purer, and higher, and greater will be
    Our wonder, our transport, when Jesus we see.`
-  },
-  {
-    id: 6,
-    title: "Let Us With a Gladsome Mind",
-    author: "John Milton",
-    year: "1623",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. Let us with a gladsome mind,
+   },
+   {
+      id: 6,
+      title: "Let Us With a Gladsome Mind",
+      author: "John Milton",
+      year: "1623",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. Let us with a gladsome mind,
    Praise the Lord, for He is kind:
    For His mercies shall endure,
    Ever faithful, ever sure.
@@ -206,58 +213,58 @@ Refrain:
 4. All things living He doth feed;
    His full hand supplies their need:
    For His mercies shall endure,
+   Ever faithful, ever sure.
+
+5. Let us with a gladsome mind,
+   Praise the Lord, for He is kind:
+   For His mercies shall endure,
    Ever faithful, ever sure.`
-  },
-  {
-    id: 7,
-    title: "All Hail the Power of Jesus' Name",
-    author: "Edward Perronet / John Rippon",
-    year: "1779",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. All hail the power of Jesus' name!
+   },
+   {
+      id: 7,
+      title: "All Hail the Power of Jesus' Name",
+      author: "Edward Perronet / John Rippon",
+      year: "1779",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. All hail the power of Jesus' name!
    Let angels prostrate fall;
-   Bring forth the royal diadem,
-   And crown Him Lord of all;
    Bring forth the royal diadem,
    And crown Him Lord of all.
 
 2. Ye seed of Israel's chosen race,
    Ye ransomed from the fall,
    Hail Him Who saves you by His grace,
-   And crown Him Lord of all;
-   Hail Him Who saves you by His grace,
    And crown Him Lord of all.
 
 3. Sinners, whose love can ne'er forget
    The wormwood and the gall,
    Go spread your trophies at His feet,
-   And crown Him Lord of all;
-   Go spread your trophies at His feet,
    And crown Him Lord of all.
 
-4. Let ev'ry kindred, ev'ry tribe,
+4. Let every kindred, every tribe,
    On this terrestrial ball,
    To Him all majesty ascribe,
-   And crown Him Lord of all;
-   To Him all majesty ascribe,
    And crown Him Lord of all.
 
-5. O that with yonder sacred throng
+5. Crown Him, ye martyrs of our God,
+   Who from His altar call;
+   Extol the Stem of Jesse's rod,
+   And crown Him Lord of all.
+
+6. O that with yonder sacred throng
    We at His feet may fall,
    We'll join the everlasting song,
-   And crown Him Lord of all;
-   We'll join the everlasting song,
    And crown Him Lord of all.`
-  },
-  {
-    id: 8,
-    title: "Now Thank We All Our God",
-    author: "Martin Rinkart; Trans. Catherine Winkworth",
-    year: "1636",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. Now thank we all our God,
+   },
+   {
+      id: 8,
+      title: "Now Thank We All Our God",
+      author: "Martin Rinkart; Trans. Catherine Winkworth",
+      year: "1636",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. Now thank we all our God,
    With heart and hands and voices,
    Who wondrous things has done,
    In whom His world rejoices;
@@ -283,15 +290,15 @@ Refrain:
    Whom heaven and earth adore;
    For thus it was, is now,
    And shall be evermore.`
-  },
-  {
-    id: 9,
-    title: "Praise Him! Praise Him!",
-    author: "Fanny J. Crosby",
-    year: "1869",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. Praise Him! Praise Him! Jesus, our blessed Redeemer!
+   },
+   {
+      id: 9,
+      title: "Praise Him! Praise Him!",
+      author: "Fanny J. Crosby",
+      year: "1869",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. Praise Him! Praise Him! Jesus, our blessed Redeemer!
    Sing, O earth, His wonderful love proclaim!
    Hail Him! Hail Him! Highest archangels in glory;
    Strength and honor give to His holy Name!
@@ -317,15 +324,15 @@ Refrain:
    Pow'r and glory Unto the Lord belong:
    Praise Him! Praise Him! Tell of His excellent greatness;
    Praise Him! Praise Him! Ever in joyful song!`
-  },
-  {
-    id: 10,
-    title: "Great Is Thy Faithfulness",
-    author: "Thomas O. Chisholm",
-    year: "1923",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. Great is Thy faithfulness, O God my Father;
+   },
+   {
+      id: 10,
+      title: "Great Is Thy Faithfulness",
+      author: "Thomas O. Chisholm",
+      year: "1923",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. Great is Thy faithfulness, O God my Father;
    There is no shadow of turning with Thee;
    Thou changest not, Thy compassions, they fail not;
    As Thou hast been, Thou forever wilt be.
@@ -345,15 +352,15 @@ Refrain:
    Thine own dear presence to cheer and to guide,
    Strength for today and bright hope for tomorrow,
    Blessings all mine, with ten thousand beside!`
-  },
-  {
-    id: 11,
-    title: "Be Glad in the Lord and Rejoice",
-    author: "Mary E. Servoss",
-    year: "1876",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. Be glad in the Lord and rejoice,
+   },
+   {
+      id: 11,
+      title: "Be Glad in the Lord and Rejoice",
+      author: "Mary E. Servoss",
+      year: "1876",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. Be glad in the Lord and rejoice,
    All ye that are upright in heart;
    And ye that have made Him your choice,
    Bid sadness and sorrow depart.
@@ -381,15 +388,15 @@ Chorus:
    His praises proclaiming in song;
    With harp and with organ and voice,
    The loud hallelujahs prolong.`
-  },
-  {
-    id: 12,
-    title: "How Great Thou Art",
-    author: "Stuart K. Hine",
-    year: "1949",
-    category: "Adoration and Praise",
-    categoryId: 1,
-    lyrics: `1. O Lord my God, when I in awesome wonder
+   },
+   {
+      id: 12,
+      title: "How Great Thou Art",
+      author: "Stuart K. Hine",
+      year: "1949",
+      category: "Adoration and Praise",
+      categoryId: 1,
+      lyrics: `1. O Lord my God, when I in awesome wonder
    Consider all the worlds Thy hands have made,
    I see the stars, I hear the rolling thunder,
    Thy power throughout the universe displayed.
@@ -414,5 +421,6 @@ Chorus:
    And take me home, what joy shall fill my heart!
    Then I shall bow in humble adoration,
    And there proclaim, "My God, how great Thou art!"`
-  }
+   }
 ];
+

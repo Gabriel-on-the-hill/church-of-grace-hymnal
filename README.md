@@ -1,4 +1,4 @@
-# Church of Grace Hymnal 🕊️
+# Church of Grace SELECTED HYMNS OF WORSHIP 🕊️
 
 A Progressive Web App (PWA) for easy access to 75 classic church hymns. Designed for simplicity and accessibility, perfect for worship services and personal devotion.
 

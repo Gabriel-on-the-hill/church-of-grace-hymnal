@@ -34,7 +34,7 @@ export default function Home() {
                 <path d="M12 2L9 9H2L7 14L5 21L12 17L19 21L17 14L22 9H15L12 2Z" />
               </svg>
             </div>
-            <h1 className="text-2xl font-bold text-white">Church of Grace Hymnal</h1>
+            <h1 className="text-2xl font-bold text-white">Church of Grace SELECTED HYMNS OF WORSHIP</h1>
           </div>
 
           {/* Search Bar */}
