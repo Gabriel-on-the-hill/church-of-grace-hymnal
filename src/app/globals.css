@@ -145,6 +145,62 @@ body {
   fill: #ef4444;
 }
 
+/* Print Styles */
+@media print {
+
+  header,
+  footer,
+  button,
+  .no-print,
+  nav,
+  .category-badge,
+  .search-bar {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Ensure lyrics are readable */
+  .hymn-lyrics {
+    font-size: 14pt !important;
+    line-height: 1.5;
+    column-count: 2;
+    /* Two column layout for saving paper */
+    column-gap: 2rem;
+  }
+
+  /* Make title big and centered */
+  h1 {
+    text-align: center;
+    font-size: 24pt !important;
+    margin-bottom: 1rem;
+    color: black !important;
+  }
+
+  /* Hide shadows and backgrounds */
+  div {
+    box-shadow: none !important;
+    background: none !important;
+  }
+
+  /* Ensure page breaks don't cut verses */
+  .mb-6 {
+    break-inside: avoid;
+  }
+}
+
 /* Print Stylesheet */
 @media print {
 

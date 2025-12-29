@@ -3,15 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { categories, allHymns, searchHymns, getFirstLine } from "@/data";
-import { DoveIcon } from "@/components/DoveIcon";
-import { useTheme } from "@/context/ThemeContext";
+import DoveIcon from "@/components/DoveIcon";
+import ThemeToggle from "@/components/ThemeToggle";
+
 
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<typeof allHymns>([]);
   const [isSearching, setIsSearching] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -34,30 +34,16 @@ export default function Home() {
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "var(--accent)" }}>
-                <DoveIcon className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10">
+                <DoveIcon className="w-8 h-8" />
               </div>
               <h1 className="text-xl font-bold text-white">Church of Grace SELECTED HYMNS OF WORSHIP</h1>
             </div>
 
             {/* Dark Mode Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="w-10 h-10 rounded-full flex items-center justify-center"
-              style={{ background: "rgba(255,255,255,0.1)" }}
-              title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-            >
-              {theme === "light" ? (
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              )}
-            </button>
+            <ThemeToggle />
           </div>
+
 
 
           {/* Search Bar */}

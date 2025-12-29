@@ -3,6 +3,8 @@
 import { use, useState, useEffect } from "react";
 import Link from "next/link";
 import { getHymnById, categories } from "@/data";
+import ThemeToggle from "@/components/ThemeToggle";
+
 
 export default function HymnPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
@@ -85,6 +87,9 @@ export default function HymnPage({ params }: { params: Promise<{ id: string }> }
 
 
                         <div className="flex items-center gap-2">
+                            {/* Dark Mode Toggle */}
+                            <ThemeToggle />
+
                             {/* Font Size Controls */}
                             <button
                                 onClick={() => handleFontSizeChange(fontSize - 2)}

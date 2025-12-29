@@ -7,9 +7,9 @@ export default function ServiceWorkerRegistration() {
         if (
             typeof window !== "undefined" &&
             "serviceWorker" in navigator &&
-            window.workbox !== undefined
+            (window as any).workbox !== undefined
         ) {
-            const wb = window.workbox;
+            const wb = (window as any).workbox;
             wb.register();
         }
     }, []);

@@ -1,38 +1,33 @@
-export function DoveIcon({ className = "w-8 h-8" }: { className?: string }) {
+export default function DoveIcon({ className = "w-24 h-24", withText = false }: { className?: string; withText?: boolean }) {
     return (
-        <svg
-            className={className}
-            viewBox="0 0 64 64"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            {/* Dove body */}
-            <path
-                d="M48 20c-4 0-8 2-10 5l-6-3c-2-1-4-1-6 0l-8 4c-3 1.5-5 4.5-5 8v4c0 4 3 7 7 7h2l-4 8c-1 2 0 4 2 5s4 0 5-2l6-12h4l6 12c1 2 3 3 5 2s3-3 2-5l-4-8h2c4 0 7-3 7-7v-4c0-3.5-2-6.5-5-8z"
-                fill="currentColor"
-            />
-            {/* Dove wing */}
-            <path
-                d="M20 28c-6-2-12-1-16 3 6 0 10 3 12 7 1-4 3-7 4-10z"
-                fill="currentColor"
-                opacity="0.8"
-            />
-            {/* Dove head detail */}
-            <circle cx="44" cy="24" r="2" fill="white" opacity="0.6" />
-        </svg>
-    );
-}
+        <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Background Circle */}
+            {withText && (
+                <circle cx="100" cy="100" r="100" fill="#1e3a5f" />
+            )}
 
-export function DoveLogoFull({ className = "" }: { className?: string }) {
-    return (
-        <div className={`flex items-center gap-2 ${className}`}>
-            <div
-                className="w-10 h-10 rounded-full flex items-center justify-center"
-                style={{ background: "var(--accent)" }}
-            >
-                <DoveIcon className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white">Church of Grace Hymnal</span>
-        </div>
+            {/* Dove Path - Centered and scaled */}
+            <path
+                d="M100 40c-15 0-28 5-39 13-26 22-43 17-61 17 0 35 25 65 60 75-5 10-10 22-10 35 0 25 15 45 35 55 3 2 7 3 10 5v10c0 3 2 5 5 5s5-2 5-5v-10c3-2 7-3 10-5 20-10 35-30 35-55 0-13-5-25-10-35 35-10 60-40 60-75-18 0-35 5-51 13-10-8-23-13-38-13h-10zm5 25c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5z"
+                fill="#c9a227"
+                transform="translate(25, 25) scale(0.75)"
+            />
+
+            {/* Arched Text */}
+            {withText && (
+                <>
+                    <path
+                        id="textCurve"
+                        d="M 30,100 A 70,70 0 0 1 170,100"
+                        fill="none"
+                    />
+                    <text fill="#c9a227" fontSize="18" fontWeight="bold" fontFamily="serif" letterSpacing="2">
+                        <textPath href="#textCurve" startOffset="50%" textAnchor="middle">
+                            CHURCH OF GRACE HYMNS
+                        </textPath>
+                    </text>
+                </>
+            )}
+        </svg>
     );
 }
