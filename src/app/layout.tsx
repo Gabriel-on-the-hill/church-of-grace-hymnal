@@ -3,7 +3,7 @@ import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
-  title: "Church of Grace SELECTED HYMNS OF WORSHIP",
+  title: "CHURCH OF GRACE SELECTED HYMNS OF WORSHIP",
   description: "A collection of 75 classic hymns for worship and devotion",
   manifest: "/manifest.json",
   appleWebApp: {

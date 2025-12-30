@@ -65,7 +65,7 @@ export default function HymnPage({ params }: { params: Promise<{ id: string }> }
                 <div className="max-w-2xl mx-auto">
                     <div className="flex items-center justify-between">
                         <Link
-                            href={`/category/${hymn.categoryId}`}
+                            href={`/category/${category?.slug}`}
                             className="w-10 h-10 rounded-full flex items-center justify-center"
                             style={{ background: "rgba(255,255,255,0.1)" }}
                             title="Back to category"
@@ -164,7 +164,7 @@ export default function HymnPage({ params }: { params: Promise<{ id: string }> }
                                     {hymn.author} {hymn.year && `(${hymn.year})`}
                                 </p>
                                 {category && (
-                                    <Link href={`/category/${category.id}`} className="category-badge hover:opacity-80 transition-opacity">
+                                    <Link href={`/category/${category.slug}`} className="category-badge hover:opacity-80 transition-opacity">
                                         {category.name}
                                     </Link>
                                 )}

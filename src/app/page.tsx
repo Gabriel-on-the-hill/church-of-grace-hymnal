@@ -32,16 +32,20 @@ export default function Home() {
         style={{ background: "linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)" }}
       >
         <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white/10">
-                <DoveIcon className="w-8 h-8" />
+          <div className="relative flex flex-col items-center justify-center text-center mb-6 pt-2">
+            <div className="flex flex-col items-center gap-3 w-full px-10">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center bg-white/10 shadow-lg backdrop-blur-sm">
+                <DoveIcon className="w-9 h-9" />
               </div>
-              <h1 className="text-xl font-bold text-white">Church of Grace SELECTED HYMNS OF WORSHIP</h1>
+              <h1 className="text-xl md:text-2xl font-bold text-white uppercase leading-snug tracking-wide drop-shadow-md">
+                Church of Grace Selected Hymns of Worship
+              </h1>
             </div>
 
             {/* Dark Mode Toggle */}
-            <ThemeToggle />
+            <div className="absolute right-0 top-0">
+              <ThemeToggle />
+            </div>
           </div>
 
 
@@ -124,7 +128,7 @@ export default function Home() {
               {categories.map((category, index) => (
                 <Link
                   key={category.id}
-                  href={`/category/${category.id}`}
+                  href={`/category/${category.slug}`}
                   className="block p-5 rounded-xl card-hover"
                   style={{
                     background: "var(--surface)",

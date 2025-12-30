@@ -4,11 +4,10 @@ import { use } from "react";
 import Link from "next/link";
 import { getHymnsByCategory, categories } from "@/data";
 
-export default function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = use(params);
-    const categoryId = parseInt(id);
-    const category = categories.find(c => c.id === categoryId);
-    const hymns = getHymnsByCategory(categoryId);
+export default function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = use(params);
+    const category = categories.find(c => c.slug === slug);
+    const hymns = category ? getHymnsByCategory(category.id) : [];
 
     if (!category) {
         return (

@@ -12,18 +12,19 @@ export interface Hymn {
 export interface Category {
    id: number;
    name: string;
+   slug: string;
    hymnCount: number;
 }
 
 export const categories: Category[] = [
-   { id: 1, name: "Adoration and Praise", hymnCount: 12 },
-   { id: 2, name: "Jesus Christ", hymnCount: 17 },
-   { id: 3, name: "Grace and Salvation of God", hymnCount: 10 },
-   { id: 4, name: "Trust and Assurance", hymnCount: 11 },
-   { id: 5, name: "Guidance and Prayer", hymnCount: 7 },
-   { id: 6, name: "Discipleship and Consecration", hymnCount: 7 },
-   { id: 7, name: "Victory and Service", hymnCount: 7 },
-   { id: 8, name: "Hope and Eternal Life", hymnCount: 4 },
+   { id: 1, name: "Adoration and Praise", slug: "adoration-and-praise", hymnCount: 12 },
+   { id: 2, name: "Jesus Christ", slug: "jesus-christ", hymnCount: 17 },
+   { id: 3, name: "Grace and Salvation of God", slug: "grace-and-salvation", hymnCount: 10 },
+   { id: 4, name: "Trust and Assurance", slug: "trust-and-assurance", hymnCount: 11 },
+   { id: 5, name: "Guidance and Prayer", slug: "guidance-and-prayer", hymnCount: 7 },
+   { id: 6, name: "Discipleship and Consecration", slug: "discipleship-and-consecration", hymnCount: 7 },
+   { id: 7, name: "Victory and Service", slug: "victory-and-service", hymnCount: 7 },
+   { id: 8, name: "Hope and Eternal Life", slug: "hope-and-eternal-life", hymnCount: 4 },
 ];
 
 export const hymns: Hymn[] = [
